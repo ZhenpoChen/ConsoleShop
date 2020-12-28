@@ -6,8 +6,6 @@ public class Test {
     public static void main(String[] args) throws ClassNotFoundException {
         boolean bool = true;
         while (bool) {
-
-
             System.out.println("请输入用户名：");
 
             Scanner sc = new Scanner(System.in);
@@ -20,7 +18,6 @@ public class Test {
 
             /*File file=new File("D:\\LanQiao\\idealIU2019\\IdeaProjects\\ConsoleShop\\src\\UserInfo.xlsx");*/ //转成一个可变的自由的读取路径方式
             InputStream in = Class.forName("Test").getResourceAsStream("/UserInfo.xlsx");
-
             ReadExcel readExcel = new ReadExcel();//创建对象
             User[] users = readExcel.readExcel(in);
             for (int i = 0; i < users.length; i++) {
